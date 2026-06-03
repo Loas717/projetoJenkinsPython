@@ -22,7 +22,6 @@ def test_dividir():
     calc = Calculadora()
     assert calc.dividir(10, 2) == 5
 
-
 def test_dividir_por_zero():
     calc = Calculadora()
     with pytest.raises(ValueError):
