@@ -40,10 +40,11 @@ pipeline {
                 bat """
                     taskkill /F /IM python.exe /T || exit /B 0
                     call venv\\Scripts\\activate.bat
-                    start /B python -m app.main
-                """
-            }
-        }
+                    start "Calculadora Flask" /B python -m app.main
+                    timeout /T 5
+                """ 
+    }
+}
     }
 
     post {
