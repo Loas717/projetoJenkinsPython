@@ -14,7 +14,7 @@ def test_subtrair():
 
 def test_multiplicar():
     calc = Calculadora()
-    assert calc.multiplicar(3, 4) == 12
+    assert calc.multiplicar(5, 4) == 12
 
 
 def test_dividir():
