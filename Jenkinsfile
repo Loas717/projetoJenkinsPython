@@ -61,4 +61,19 @@ pipeline {
             junit allowEmptyResults: true, testResults: 'relatorio-testes.xml'
         }
     }
+
+    post {
+    always {
+
+        publishHTML([
+            allowMissing: false,
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            reportDir: 'htmlcov',
+            reportFiles: 'index.html',
+            reportName: 'Cobertura de Testes'
+        ])
+
+    }
+}
 }
