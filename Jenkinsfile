@@ -27,6 +27,15 @@ pipeline {
             }
         }
 
+        stage('Analise de Vulnerabilidades') {
+    steps {
+        dependencyCheck(
+            odcInstallation: 'DependencyCheck',
+            additionalArguments: '--scan .'
+        )
+    }
+}
+
         stage('Build') {
             steps {
                 bat """
