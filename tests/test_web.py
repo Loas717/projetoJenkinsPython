@@ -1,5 +1,5 @@
 from app import create_app
-# Testes para a aplicação web
+# Testes para a aplicação we
 
 def test_home_status_code():
     app = create_app()
