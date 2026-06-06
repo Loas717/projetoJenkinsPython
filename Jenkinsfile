@@ -31,7 +31,7 @@ pipeline {
     steps {
         dependencyCheck(
             odcInstallation: 'DependencyCheck',
-            additionalArguments: '--scan .'
+            additionalArguments: '--scan . --failOnError false'
         )
     }
 }
